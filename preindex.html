@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Meesho Online Shopping Site - Stylish Ethnic & Lifestyle Products</title>
+<meta name="description" content="Shop stylish ethnic wear, home essentials, beauty products, and more at Meesho Clone. Explore women's, men's, kids', and accessories collections with quality and affordable prices." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://yourdomain.com/" />
+<meta name="theme-color" content="#ff4081" />
+<meta name="author" content="Your Company or Name" />
+<meta property="og:title" content="Meesho Clone - Stylish Ethnic & Lifestyle Products" />
+<meta property="og:description" content="Shop stylish ethnic wear, home essentials, beauty products, and more at Meesho Clone. Explore women's, men's, kids', and accessories collections with quality and affordable prices." />
+<meta property="og:url" content="https://yourdomain.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1542068829-1115f7259450?auto=format&fit=crop&w=1200&q=80" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Meesho Clone - Stylish Ethnic & Lifestyle Products" />
+<meta name="twitter:description" content="Shop stylish ethnic wear, home essentials, beauty products, and more at Meesho Clone. Explore women's, men's, kids', and accessories collections with quality and affordable prices." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1542068829-1115f7259450?auto=format&fit=crop&w=1200&q=80" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        :root {
+            --primary-color: #ff3f6c;
+            --primary-dark: #d63558;
+            --secondary-color: #6c757d;
+            --bg-color: #fef9fb;
+            --text-color: #222;
+            --font-family: 'Poppins', sans-serif;
+            --shadow-light: rgba(0, 0, 0, 0.07);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            padding: 0.85rem 1.5rem;
+            box-shadow: 0 4px 10px var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.9rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            user-select: none;
+            flex-shrink: 0;
+        }
+
+        nav {
+            flex-grow: 1;
+            margin-left: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.3rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 0.38rem 0.5rem;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            user-select: none;
+            display: inline-block;
+        }
+
+        nav a:hover,
+        nav a:focus,
+        nav a.active {
+            color: white;
+            background-color: var(--primary-color);
+            outline: none;
+        }
+
+        /* Dropdown for categories - optional */
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0 6px 15px var(--shadow-light);
+            border-radius: 8px;
+            top: 2.6rem;
+            left: 0;
+            min-width: 150px;
+            z-index: 1200;
+        }
+
+        nav ul ul li {
+            margin: 0;
+        }
+
+        nav ul ul a {
+            padding: 0.4rem 1rem;
+            font-weight: 400;
+            color: var(--text-color);
+        }
+
+        nav ul ul a:hover,
+        nav ul ul a:focus {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Search */
+        .search-bar {
+            position: relative;
+            margin-left: 2rem;
+            max-width: 280px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.5rem 3rem 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 25px;
+            border: 1.8px solid #ddd;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 0.4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.38rem 1rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover,
+        .search-bar button:focus {
+            background: var(--primary-dark);
+            outline: none;
+        }
+
+        /* Main content */
+        main {
+            flex-grow: 1;
+            max-width: 1300px;
+            margin: 2.5rem auto 4rem;
+            padding: 0 1rem;
+        }
+
+        h2.section-title {
+            font-weight: 600;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.8rem;
+            text-align: center;
+        }
+
+        /* Categories horizontal scroll */
+        .categories-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            margin-bottom: 2.8rem;
+            
+            padding-bottom: 0.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) #eee;
+        }
+
+        .categories-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .categories-scroll::-webkit-scrollbar-track {
+            background: #eee;
+        }
+
+        .categories-scroll::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .category-item {
+            flex: 0 0 auto;
+            padding: 0.55rem 1.3rem;
+            border-radius: 25px;
+            background: #fff0f4;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            user-select: none;
+            box-shadow: 0 4px 12px rgb(255 63 108 / 0.3);
+            transition: background-color 0.35s ease, color 0.35s ease;
+            white-space: nowrap;
+            border: 1.5px solid transparent;
+        }
+
+        .category-item.active,
+        .category-item:hover,
+        .category-item:focus {
+            background: var(--primary-color);
+            color: white;
+            outline: none;
+            border-color: var(--primary-dark);
+        }
+
+        /* Products grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 5px 22px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover,
+        .product-card:focus-within {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 35px rgb(0 0 0 / 0.15);
+            outline: none;
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background: #fff0f4;
+        }
+
+        .product-info {
+            padding: 1rem 1.2rem 1.3rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 0 0 0.65rem;
+            color: #222;
+            min-height: 44px;
+        }
+
+        .product-price {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+        }
+
+        .btn-buy {
+            margin-top: 1.15rem;
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            border-radius: 30px;
+            padding: 0.65rem 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgb(255 63 108 / 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-buy:hover,
+        .btn-buy:focus-visible {
+            background: var(--primary-dark);
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #ccc;
+            font-weight: 500;
+            text-align: center;
+            padding: 1.8rem 1rem;
+            user-select: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            header {
+                flex-wrap: wrap;
+                gap: 0.85rem;
+                padding: 0.85rem 1rem;
+            }
+
+            nav {
+                flex-grow: 1;
+                margin-left: 0;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 0.9rem;
+                justify-content: center;
+            }
+
+            .search-bar {
+                margin-left: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+
+            main {
+                width: 95%;
+                margin: 2rem auto 3rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .product-title {
+                font-size: 0.9rem;
+                min-height: 38px;
+            }
+
+            .btn-buy {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.9rem;
+            }
+        }
+    </style>
+    <!-- JSON-LD Structured Data for Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Meesho Clone",
+  "url": "https://yourdomain.com/",
+  "logo": "https://images.unsplash.com/photo-1542068829-1115f7259450?auto=format&fit=crop&w=1200&q=80",
+  "sameAs": [
+    "https://www.facebook.com/yourpage",
+    "https://twitter.com/yourhandle",
+    "https://www.instagram.com/yourhandle"
+  ]
+}
+</script>
+
+<!-- JSON-LD Structured Data for Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://yourdomain.com/"
+  }]
+}
+</script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo" tabindex="0" aria-label="Meesho logo">Meesho</div>
+        <nav aria-label="Primary navigation">
+            <ul id="navCategories" role="menubar">
+                <li><a href="#" class="active" role="menuitem" tabindex="0" data-cat="all">All</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1" data-cat="women">Women Ethnic</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1" data-cat="men">Men</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1" data-cat="home">Home & Kitchen</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1" data-cat="beauty">Beauty & Health</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1" data-cat="kids">Kids & Babies</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1" data-cat="accessories">Accessories</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar" role="search">
+            <input type="search" id="searchInput" placeholder="Search for products, brands and more"
+                aria-label="Search products" />
+            <button aria-label="Search products" type="button" id="searchBtn">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="section-title" id="sectionTitle">All Products</h2>
+        <div class="categories-scroll" id="categoriesScroll" role="tablist" aria-label="Product Categories">
+            <button class="category-item active" role="tab" aria-selected="true" tabindex="0"
+                data-cat="all">All</button>
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="women">Women
+                Ethnic</button>
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="men">Men</button>
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="home">Home &
+                Kitchen</button>
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="beauty">Beauty &
+                Health</button>
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="kids">Kids &
+                Babies</button>
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1"
+                data-cat="accessories">Accessories</button>
+        </div>
+
+        <section class="products-grid" id="productsGrid" tabindex="0" aria-live="polite" aria-label="Product listings">
+            <!-- Products inserted dynamically -->
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Meesho Clone ! 
+    </footer>
+
+    <script>
+        const productsData = [
+            { id: 'w1', category: 'women', title: "Women’s Pink Ethnic Kurta", price: 499, image: "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/6/a/6aa16e4AYNKB52PINKPink_1.jpg?rnd=20200526195200" },
+            { id: 'w2', category: 'women', title: "Women’s Blue Anarkali Dress", price: 999, image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSYtcvlQ3VZr_j7pi4OBtWIcjzfKrr6tSBFdhxyf473C0MzdkrO3H0pIDmavqu3w7_DR53bjb3haT7gz4fI2chl4KBV-p7e6VQ9j38H3YeFZzugpBIw7DiM&usqp=CAc" },
+            { id: 'w3', category: 'women', title: "Designer Saree", price: 1199, image: "https://static.wixstatic.com/media/faf1ba_8e61a7e398744cc7bf39deab4da8c0a3~mv2.jpg/v1/fill/w_526,h_691,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/faf1ba_8e61a7e398744cc7bf39deab4da8c0a3~mv2.jpghttps://sudathi.com/cdn/shop/files/4314S606_1.jpg?v=1756404683&width=1100" },
+            { id: 'm1', category: 'men', title: "Men’s Casual Shirt", price: 799, image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTu4TN3j6PxQc2nWUa1bMiNw1XlGJY-zt8riKgNLYv4NchC9p4AKtgE2XmtV9FNk8a8OUL16ifMMAY31J1QCdK5N09P3eHoZZG57ufKqZFwt1D6miBSHSD0OosAlz-piTGnHyAZ5S8&usqp=CActtps://images.meesho.com/images/products/87095747/aytzr_512.jpg" },
+            { id: 'm2', category: 'men', title: "Men’s Ethnic Kurta", price: 650, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSnmqNkOw13BgkhuRN4EhPpdfsg4yHU8qSPeEqqOYXDE5gNO2XgYKa3ZQYe1qsrYgacCRpM2wfYlKGfwr0-nICMTANvW8V3AZy_xOymqZoMGPg5u2R9tZ5erg&usqp=CAc" },
+            { id: 'm3', category: 'men', title: "Men’s Jeans", price: 999, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQhkOWQCuIpwMbf4xlpsZXJWUFRXdFkDLkRgswcnKPZGpUpa5BlVnU5QxqFZv4lxcHtZkld1nefO8R2oyFl151rjsygEuLemxz3SNUsN7-PLRzaJcz5loul8lJ0hz5a9xG0FSAKo7qxbIaimPr_&usqp=CAc" },
+            { id: 'home1', category: 'home', title: "Spice Rack for Kitchen", price: 599, image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTUYWe5RuZyf0UI-N3OapMAS8v0ZXBgUEJZmONK8Yj0xHoGS7lcx6WTVHrHPrvTcWbot_uJSbOfh4wcEQB-0tRULAMNMWNfBe7Za90poi9PHUCVeRhe06CTWRqpqQ&usqp=CAc" },
+            { id: 'home2', category: 'home', title: "LED Floor Lamp", price: 1299, image: "https://m.media-amazon.com/images/I/71p5fisYQCL.jpg" },
+            { id: 'home3', category: 'home', title: "Decorative Cushion Cover", price: 349, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSjfWTVZWRTLUrMV-8v8vD8QidMAE0aatyyglZLAcgJuYzBXE8ArkIBA1-DVJ6WZ-ysd9Zyyrc1xSnIpfBQxbR3UhkW1Fjy3GDV5k9DS8E&usqp=CAc" },
+            { id: 'beauty1', category: 'beauty', title: "Natural Face Cream", price: 299, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSjHClCrXkpRH3sxyfTCmLmjrptBBD5UHTXzD7Qy099wuT75sdvJNtylwP3CQbYY00lgUF6IZNs8AnfEFK-jpI7c05TXrgcJ0BDPY-lNsCH5pfKXN2eHTNrhOK_4Ga3dypPPDuePWw&usqp=CAc" },
+            { id: 'beauty2', category: 'beauty', title: "Hair Oil", price: 450, image: "https://cdn-v2.o2vend.com/433fcd44-c0b5-41b0-a6f8-0b0e764b9b83/7a622465-dc9d-4983-9641-acceb744a49c.webp" },
+            { id: 'kids1', category: 'kids', title: "Baby Rompers", price: 399, image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRGarL6F2tIh5hEaiiOYshYSDsxDG34fDO1Gk39RTUzvqjS2Db6VISNLfuBxh1-gJsK4pwjjhUrGuqQNese8i7UjzmhKsqXFUTAm_UyiPw4_7y1ThUf_BXRZgUvmeD2gY-It00wg271&usqp=CActtps://images.meesho.com/images/products/89180351/fqdrk_512.jpg" },
+            { id: 'kids2', category: 'kids', title: "Kids Sneakers", price: 699, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwGHFZvLYDIzufocp_dvtpNSyWU1owDZjTAQ&sps://images.meesho.com/images/products/99497561/a96s8a3w2utj_512.jpg" },
+            { id: 'acc1', category: 'accessories', title: "Trendy Handbag", price: 799, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQ5P-MaOn9Jq4JtAJCFZ6kooaauphaDm3gQ&s" },
+            { id: 'acc2', category: 'accessories', title: "Sunglasses", price: 499, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi-GFLAXjYFEo1G_9hfdG98D5hh14ddasOGA&ss/products/84388221/sy7kxyjt75lx_512.jpg" }
+        ];
+
+        const productsGrid = document.getElementById('productsGrid');
+        const categoriesScroll = document.getElementById('categoriesScroll');
+        const navCategories = document.getElementById('navCategories');
+        const sectionTitle = document.getElementById('sectionTitle');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+
+        let selectedCategory = 'all';
+        let searchTerm = '';
+
+        // Render products filtered by category and search term
+        function renderProducts() {
+            const filtered = productsData.filter(p => {
+                const matchCat = selectedCategory === 'all' || p.category === selectedCategory;
+                const matchSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchCat && matchSearch;
+            });
+
+            sectionTitle.textContent = (selectedCategory === 'all' ? 'All Products' : capitalize(selectedCategory)) + (searchTerm ? ` - Search: "${searchTerm}"` : '');
+
+            if (filtered.length === 0) {
+                productsGrid.innerHTML = `<p style="color:#666; font-size:1.1rem; grid-column: 1/-1; text-align:center; user-select:none;">No products found.</p>`;
+                return;
+            }
+
+            productsGrid.innerHTML = filtered.map(p => `
+      <article class="product-card" tabindex="0" aria-label="${p.title}, price ₹${p.price}">
+        <img class="product-image" src="${p.image}" alt="${p.title}" />
+        <div class="product-info">
+          <h3 class="product-title">${p.title}</h3>
+          <div class="product-price">₹${p.price}</div>
+          <button class="btn-buy" aria-label="Buy ${p.title} now">Buy Now</button>
+        </div>
+      </article>
+    `).join('');
+        }
+
+        // Capitalize first letter
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // Category tabs handler
+        function focusTab(tabBtns, focusedIndex) {
+            tabBtns.forEach((btn, i) => {
+                btn.setAttribute('tabindex', i === focusedIndex ? '0' : '-1');
+                btn.setAttribute('aria-selected', i === focusedIndex ? 'true' : 'false');
+                if (i === focusedIndex) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+            tabBtns[focusedIndex].focus();
+        }
+
+        // Horizontal category button clicks update
+        categoriesScroll.addEventListener('click', e => {
+            if (e.target.classList.contains('category-item')) {
+                selectedCategory = e.target.dataset.cat;
+                updateCategoryActive();
+                renderProducts();
+            }
+        });
+
+        // Vertical nav category clicks update and sync with horizontal categories
+        navCategories.addEventListener('click', e => {
+            if (e.target.dataset.cat) {
+                selectedCategory = e.target.dataset.cat;
+                updateCategoryActive();
+                renderProducts();
+            }
+        });
+
+        // Synchronize active states of categories in header nav and horizontal scroll
+        function updateCategoryActive() {
+            // Horizontal categories
+            [...categoriesScroll.children].forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.cat === selectedCategory);
+                btn.setAttribute('aria-selected', btn.dataset.cat === selectedCategory ? 'true' : 'false');
+                btn.tabIndex = btn.dataset.cat === selectedCategory ? 0 : -1;
+            });
+
+            // Vertical nav categories
+            [...navCategories.querySelectorAll('a')].forEach(a => {
+                a.classList.toggle('active', a.dataset.cat === selectedCategory);
+                a.tabIndex = a.dataset.cat === selectedCategory ? 0 : -1;
+            });
+
+            // Update aria-label on nav
+            sectionTitle.textContent = (selectedCategory === 'all' ? 'All Products' : capitalize(selectedCategory)) + (searchTerm ? ` - Search: "${searchTerm}"` : '');
+        }
+
+        // Search actions
+        searchBtn.addEventListener('click', () => {
+            searchTerm = searchInput.value.trim();
+            renderProducts();
+        });
+        searchInput.addEventListener('keydown', e => {
+            if (e.key === 'Enter') {
+                searchTerm = searchInput.value.trim();
+                renderProducts();
+            }
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchTerm = '';
+                renderProducts();
+            }
+        });
+
+        // Initialize page
+        renderProducts();
+
+        // Keyboard navigation for horizontal categories (roving tabindex)
+        const tabBtns = [...categoriesScroll.querySelectorAll('button.category-item')];
+        let focusedIndex = 0;
+        categoriesScroll.addEventListener('keydown', e => {
+            if (['ArrowRight', 'ArrowLeft'].includes(e.key)) {
+                e.preventDefault();
+                if (e.key === 'ArrowRight') {
+                    focusedIndex = (focusedIndex + 1) % tabBtns.length;
+                } else {
+                    focusedIndex = (focusedIndex - 1 + tabBtns.length) % tabBtns.length;
+                }
+                focusTab(tabBtns, focusedIndex);
+            }
+            if (e.key === 'Home') {
+                e.preventDefault();
+                focusedIndex = 0;
+                focusTab(tabBtns, focusedIndex);
+            }
+            if (e.key === 'End') {
+                e.preventDefault();
+                focusedIndex = tabBtns.length - 1;
+                focusTab(tabBtns, focusedIndex);
+            }
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectedCategory = tabBtns[focusedIndex].dataset.cat;
+                updateCategoryActive();
+                renderProducts();
+            }
+        });
+        // Fix back button or 'All' click after search to reset searchTerm
+window.addEventListener('popstate', () => {
+  searchTerm = '';
+  searchInput.value = '';
+  selectedCategory = 'all';
+  updateCategoryActive();
+  renderProducts();
+});
+
+// Modify category click handlers to reset searchTerm when switching categories
+categoriesScroll.addEventListener('click', e => {
+  if(e.target.classList.contains('category-item')) {
+    searchTerm = '';
+    searchInput.value = '';
+    selectedCategory = e.target.dataset.cat;
+    updateCategoryActive();
+    renderProducts();
+  }
+});
+
+navCategories.addEventListener('click', e => {
+  if(e.target.dataset.cat) {
+    searchTerm = '';
+    searchInput.value = '';
+    selectedCategory = e.target.dataset.cat;
+    updateCategoryActive();
+    renderProducts();
+  }
+});
+        // Set initial keyboard focus state for category tabs:
+        focusTab(tabBtns, 0);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta Tags -->
+  <title>Cart - Meesho India | Shop Your Favorites</title>
+  <meta name="title" content="Cart - Meesho India | Shop Your Favorites" />
+  <meta name="description" content="View and manage the items in your cart. Checkout easily on Meesho India — your one-stop destination for fashion, home decor, beauty, and more." />
+  <meta name="keywords" content="Meesho India, shopping cart, online fashion, checkout page, ethnic wear, home essentials, affordable shopping" />
+  <meta name="author" content="Meesho India" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#FF3F6C" />
+  <meta name="msapplication-TileColor" content="#FF3F6C" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://meeshoindia.netlify.app/cart.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Meesho India" />
+  <meta property="og:url" content="https://meeshoindia.netlify.app/cart.html" />
+  <meta property="og:title" content="Your Cart - Meesho India" />
+  <meta property="og:description" content="Review your selected products and proceed to checkout. Continue shopping affordable fashion and lifestyle products on Meesho India." />
+  <meta property="og:image" content="https://meeshoindia.netlify.app/assets/cart-preview.png" />
+  <meta property="og:image:alt" content="Shopping cart preview on Meesho India" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@meeshoindia" />
+  <meta name="twitter:title" content="Your Cart - Meesho India" />
+  <meta name="twitter:description" content="View and manage your Meesho India shopping cart. Checkout easily and keep shopping your favorite products!" />
+  <meta name="twitter:image" content="https://meeshoindia.netlify.app/assets/cart-preview.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Primary Color Variable -->
+  <style>
+    :root {
+      --primary-color: #ff3f6c;
+    }
+  </style>
+
+
+  <style>
+    :root{
+      --primary-color:#ff3f6c;
+      --primary-dark:#d63558;
+      --text-color:#222;
+      --muted:#6c757d;
+      --bg:#fef9fb;
+      --shadow:rgba(0,0,0,0.07);
+      --font: 'Poppins',sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text-color);min-height:100vh;display:flex;flex-direction:column}
+
+    /* -----------------------
+       NAVBAR (REPLACED only)
+       Modern look: black logo (left), centered search, Home/Profile/Cart (right)
+       Desktop layout unchanged.
+       ----------------------- */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      background:#ffffff;
+      padding:12px 36px;
+      border-bottom:1px solid #eee;
+      position:sticky;
+      top:0;
+      z-index:1200;
+      box-shadow:0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .logo{
+      font-size:26px;
+      font-weight:700;
+      color:#FF3F6C;
+      text-decoration:none;
+      text-transform:lowercase;
+      margin-right:20px;
+      flex:0 0 auto;
+    }
+
+    .search-bar{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      min-width:200px;
+      margin:0 16px;
+    }
+
+    .search-inner{
+      display:flex;
+      align-items:center;
+      width:100%;
+      max-width:680px;
+      background:#fff;
+      border-radius:28px;
+      border:1px solid #e5e5e5;
+      padding:8px 14px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.03);
+      transition:box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .search-inner:focus-within{
+      border-color:var(--primary-color);
+      box-shadow:0 4px 12px rgba(255,63,108,0.08);
+    }
+
+    .search-icon{font-size:18px;margin-right:10px;color:#777}
+    .search-inner input{flex:1;border:none;outline:none;font-size:15px;color:#333;padding:6px 0}
+
+    .nav-actions{display:flex;align-items:center;gap:14px;flex:0 0 auto}
+
+    .home-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:white;
+      color:#444;
+      font-weight:600;
+      padding:8px 14px;
+      border-radius:12px;
+      border:1px solid #e6e6e6;
+      box-shadow:0 2px 5px rgba(0,0,0,0.05);
+      text-decoration:none;
+      transition:all 0.22s ease;
+    }
+    .home-btn:hover{background:#f8f4ff;color:#5a2ca0;border-color:#d5c5fa;transform:translateY(-1px)}
+
+    .action-btn{
+      display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid #eee;color:#444;text-decoration:none;position:relative;transition:all 0.22s ease;
+    }
+    .action-btn:hover{background:#f8f4ff;color:#5a2ca0;box-shadow:0 3px 6px rgba(90,44,160,0.12);transform:translateY(-1px)}
+
+    .cart-count{position:absolute;top:-4px;right:-4px;background:var(--primary-color);color:#fff;font-size:11px;font-weight:800;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+    header.scrolled{box-shadow:0 3px 16px rgba(0,0,0,0.08)}
+
+    /* -----------------------
+       ORIGINAL PAGE STYLES (kept same as your original cart.html)
+       ----------------------- */
+    .cart-layout{display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:start;padding:28px 20px}
+    @media(max-width:900px){ .cart-layout{grid-template-columns:1fr;padding:20px} }
+
+    .cart-items{background:white;border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .cart-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #f2f2f2;align-items:center}
+    .cart-thumb{width:88px;height:88px;border-radius:8px;overflow:hidden;background:#fff0f4;display:flex;align-items:center;justify-content:center}
+    .cart-thumb img{width:100%;height:100%;object-fit:contain}
+    .item-meta{flex:1}
+    .item-title{font-weight:700;margin:0 0 6px}
+    .item-price{color:var(--primary-color);font-weight:700;margin-bottom:6px}
+    .qty-control{display:flex;align-items:center;gap:0.6rem}
+    .qty-control button{width:30px;height:30px;border-radius:6px;border:none;background:#f2f2f2;font-weight:700;cursor:pointer}
+    .remove-btn{background:transparent;border:none;color:#888;cursor:pointer;text-decoration:underline;padding:0;font-size:0.95rem}
+
+    .cart-summary{background:white;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,0.06);height:max-content}
+    .summary-row{display:flex;justify-content:space-between;padding:8px 0;font-weight:600}
+    .total{font-size:1.25rem;color:var(--primary-color)}
+    .btn-primary{display:inline-block;width:100%;padding:10px;border-radius:10px;border:none;background:var(--primary-color);color:white;font-weight:800;cursor:pointer;margin-top:10px}
+    .btn-secondary{display:inline-block;width:100%;padding:8px;border-radius:10px;border:1px solid #ddd;background:white;color:var(--text-color);cursor:pointer;margin-top:8px}
+    .empty-msg{text-align:center;padding:24px;color:#666}
+
+    main{flex-grow:1;max-width:1100px;margin:18px auto;padding:0 16px;width:95%}
+    h2{color:var(--primary-color);font-size:1.6rem;margin-bottom:12px}
+
+    footer{background:#222;color:#ccc;padding:18px;text-align:center;margin-top:28px}
+
+    /* -----------------------
+       MOBILE RESPONSIVE CHANGES ONLY
+       (Do NOT change desktop view)
+       - On small widths, keep desktop layout identical, but adjust mobile:
+         * Stack cart layout to single column
+         * Make header compact: search becomes full-width on its own row (visually same but stacked)
+         * Convert Home button into icon-only circular button (hide text)
+         * Profile remains icon-only
+         * Keep cart icon and badge intact
+       ----------------------- */
+    @media (max-width: 700px) {
+      /* make header wrap so search can sit under logo/actions if needed */
+      header {
+        flex-wrap: wrap;
+        padding:10px 16px;
+        gap:8px;
+      }
+
+      /* center row order: keep logo left, actions right in first row,
+         but visually we want search on its own full width row under that.
+         To achieve this without changing desktop, we simply make search-bar full width and force it to appear on a new line. */
+      .search-bar {
+        order: 2;
+        width: 100%;
+        margin: 6px 0 0 0;
+        padding: 0 8px; /* small horizontal padding for breathing room */
+        justify-content: center;
+      }
+      .search-inner { max-width: 100%; padding: 8px 12px; }
+
+      /* make the top actions icon-only circles */
+      .nav-actions { order: 1; margin-left: auto; }
+      .home-btn {
+        /* convert to circular icon-only button */
+        padding: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        justify-content: center;
+        gap: 0;
+      }
+      .home-btn span { display: none; } /* hide home text on mobile */
+      .home-btn svg { width:20px; height:20px; }
+
+      /* profile and cart: ensure they remain circular and a bit larger for touch */
+      .action-btn { width:44px; height:44px; }
+      .action-btn svg { width:20px; height:20px; }
+/*    for cart highlight */
+/* Highlight cart: filled background + white icon, with smooth transition */
+.action-btn.cart-icon {
+  background: var(--primary-color) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 24px rgba(255,63,108,0.18);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+/* Ensure the SVG icon fills white */
+.action-btn.cart-icon svg,
+.action-btn.cart-icon svg path {
+  fill: #ffffff !important;
+  stroke: none !important;
+}
+
+/* Slight lift on hover to keep consistent interaction */
+.action-btn.cart-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(255,63,108,0.20);
+}
+
+/* Optional: make the badge contrast nicely on highlighted cart */
+.action-btn.cart-icon .cart-count {
+  background: #fff !important;
+  color: var(--primary-color) !important;
+  box-shadow: none !important;
+}
+/*  here ends */
+      /* ensure header-actions stay at right on small screens */
+      .nav-actions { display:flex; gap:10px; }
+
+      /* cart layout collapses to single column on mobile for readable flow */
+      .cart-layout { grid-template-columns: 1fr; gap:14px; padding: 16px; }
+
+      /* increase thumb size to make tap targets friendly when stacked */
+      .cart-thumb { width: 100%; height: 160px; border-radius: 10px; }
+      .cart-item { flex-direction: column; align-items: stretch; gap: 12px; padding: 12px; }
+
+      /* quantity buttons larger on mobile */
+      .qty-control button { width:40px; height:40px; border-radius:8px; }
+
+      /* summary buttons full-width and comfortable */
+      .btn-primary, .btn-secondary { padding:14px; font-size:16px; }
+    }
+
+    /* smaller phones tweaks */
+    @media (max-width: 520px) {
+      header { padding:8px 12px; }
+      .logo { font-size:20px; }
+      .search-inner { padding: 8px 10px; }
+      .cart-thumb { height: 140px; }
+      .search-icon { display:inline-flex; }
+    }
+
+    /* accessibility focus */
+    a:focus, button:focus { outline: 3px solid rgba(145,85,253,0.12); outline-offset: 2px; }
+ 
+/* Mobile header tweaks: reduce nav icons, increase logo to match index.html */
+@media (max-width: 900px) {
+  /* make logo slightly larger on mobile to match index.html */
+  header .logo {
+    font-size: 1.6rem !important;
+    line-height: 1;
+  }
+
+  /* reduce profile / cart svg/icon size so they fit on the same line */
+  header .action-icon,
+  header .nav-actions svg,
+  header .nav-actions img {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    min-height: 18px;
+  }
+
+  /* optional: tighten spacing between action buttons to match index */
+  header .nav-actions {
+    gap: 8px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- NAVBAR: only this block replaced -->
+  <header>
+    <a class="logo" href="index.html" aria-label="Meesho home">meesho</a>
+
+    <div class="search-bar" role="search" aria-label="Search products">
+      <div class="search-inner">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <!-- kept original search input id so existing JS works -->
+        <input id="searchInputHeader" type="search" placeholder="Try Saree, Kurti or Search by Product Code" aria-label="Search products" />
+      </div>
+    </div>
+
+    <div class="nav-actions" role="navigation" aria-label="User actions">
+      <a href="index.html" class="home-btn" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
+      </a>
+
+      <a href="#" class="action-btn" aria-label="Profile" title="Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg>
+      </a>
+
+      <a href="cart.html" class="action-btn cart-icon" aria-label="Cart" title="Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 14l-.94-2h11.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49L21.16 2H5.21L4.27 0H0v2h2l3.6 7.59-1.35 2.44C3.52 13.37 4.48 15 6 15h12v-2H7.42c-.14 0-.25-.11-.26-.24z"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ORIGINAL cart.html content (unchanged) -->
+  <main>
+    <h2 style="text-align: center;">Your Cart</h2>
+
+    <div class="cart-layout">
+      <div class="cart-items" id="cartItems"></div>
+
+      <aside class="cart-summary" id="cartSummary">
+        <div style="font-weight:700;font-size:1.05rem;margin-bottom:6px">Order Summary</div>
+        <div class="summary-row"><div>Items</div><div id="summaryCount">0</div></div>
+        <div class="summary-row"><div>Subtotal</div><div id="summarySubtotal">₹0</div></div>
+        <div class="summary-row"><div>Delivery</div><div id="summaryDelivery">₹0</div></div>
+        <div class="summary-row total"><div>Total</div><div id="summaryTotal">₹0</div></div>
+
+        <button class="btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+        <button class="btn-secondary" id="emptyCartBtn">Empty Cart</button>
+      </aside>
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Meesho Clone</footer>
+
+  <script>
+    // Navbar scroll shadow (keeps the modern behavior)
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    // ===== CART LOGIC (unchanged) =====
+    function getCart(){ try{ return JSON.parse(localStorage.getItem('cart')||'[]'); } catch(e){ console.error(e); return []; } }
+    function saveCart(cart){ localStorage.setItem('cart', JSON.stringify(cart)); updateHeaderBadge(); }
+
+    const cartItemsEl = document.getElementById('cartItems');
+    const summaryCount = document.getElementById('summaryCount');
+    const summarySubtotal = document.getElementById('summarySubtotal');
+    const summaryDelivery = document.getElementById('summaryDelivery');
+    const summaryTotal = document.getElementById('summaryTotal');
+    const emptyCartBtn = document.getElementById('emptyCartBtn');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+
+    function updateHeaderBadge(){
+      const cart = getCart();
+      const totalQty = cart.reduce((s,i)=>s+(i.qty||0),0);
+      document.getElementById('cartCount').textContent = totalQty;
+      document.getElementById('cartLink')?.setAttribute('aria-label', `Cart, ${totalQty} item${totalQty!==1?'s':''}`);
+    }
+
+    function renderCart(){
+      const cart = getCart();
+      if(!cart || cart.length === 0){
+        cartItemsEl.innerHTML = '<div class="empty-msg">Your cart is empty. <br><a href="index.html" style="color:var(--primary-color);font-weight:700;">Shop now</a></div>';
+        summaryCount.textContent = '0';
+        summarySubtotal.textContent = '₹0';
+        summaryDelivery.textContent = '₹0';
+        summaryTotal.textContent = '₹0';
+        updateHeaderBadge();
+        return;
+      }
+
+      cartItemsEl.innerHTML = cart.map(item=>`
+        <div class="cart-item" data-id="${item.id}">
+          <div class="cart-thumb"><img src="${item.image}" alt="${escapeHtml(item.title)}"/></div>
+          <div class="item-meta">
+            <div class="item-title">${escapeHtml(item.title)}</div>
+            <div class="item-price">₹${item.price}</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;">
+              <div class="qty-control">
+                <button class="qty-decrease" aria-label="Decrease">-</button>
+                <div style="min-width:36px;text-align:center;font-weight:700;">${item.qty}</div>
+                <button class="qty-increase" aria-label="Increase">+</button>
+              </div>
+              <button class="remove-btn">Remove</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // wire controls
+      document.querySelectorAll('.cart-item').forEach(el=>{
+        const id = el.dataset.id;
+        el.querySelector('.qty-decrease').addEventListener('click', ()=> updateQty(id, -1));
+        el.querySelector('.qty-increase').addEventListener('click', ()=> updateQty(id, +1));
+        el.querySelector('.remove-btn').addEventListener('click', ()=> removeItem(id));
+      });
+
+      updateSummary();
+      updateHeaderBadge();
+    }
+
+    function updateQty(id, delta){
+      const cart = getCart();
+      const idx = cart.findIndex(i=>i.id===id);
+      if(idx === -1) return;
+      cart[idx].qty = Math.max(1, (cart[idx].qty||1) + delta);
+      saveCart(cart);
+      renderCart();
+    }
+
+    function removeItem(id){
+      let cart = getCart();
+      cart = cart.filter(i=>i.id !== id);
+      saveCart(cart);
+      renderCart();
+    }
+
+    function updateSummary(){
+      const cart = getCart();
+      const itemCount = cart.reduce((s,i)=>s+(i.qty||0),0);
+      const subtotal = cart.reduce((s,i)=>s + (i.price*(i.qty||1)),0);
+      const delivery = subtotal > 999 ? 0 : (subtotal === 0 ? 0 : 49);
+      const total = subtotal + delivery;
+      summaryCount.textContent = itemCount;
+      summarySubtotal.textContent = `₹${subtotal}`;
+      summaryDelivery.textContent = `₹${delivery}`;
+      summaryTotal.textContent = `₹${total}`;
+    }
+
+    emptyCartBtn.addEventListener('click', ()=>{
+      if(confirm('Empty cart?')){
+        localStorage.removeItem('cart');
+        renderCart();
+      }
+    });
+
+ checkoutBtn.addEventListener('click', ()=> {
+  const cart = getCart();
+  if (!cart || cart.length === 0) {
+    alert('Your cart is empty. Please add items before checkout.');
+    return;
+  }
+  // Navigate to the checkout page (same tab)
+  window.location.href = 'checkout.html';
+  // --- OR open in a new tab: use this instead:
+  // window.open('checkout.html', '_blank');
+});
+
+
+    function escapeHtml(str){
+      return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+    }
+
+    // initialize render
+    renderCart();
+
+    // keep header badge updated if cart changed in other tab
+    window.addEventListener('storage', (e)=>{
+      if(e.key === 'cart') renderCart();
+    });
+
+    // optional: allow search input in header to pass search back to index
+    document.getElementById('searchInputHeader').addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter'){
+        sessionStorage.setItem('searchFromCart', e.target.value || '');
+        window.location.href = 'index.html';
+      }
+    });
+
+    // handle session search when arriving from cart (if any)
+    window.addEventListener('pageshow', ()=>{
+      const val = sessionStorage.getItem('searchFromCart');
+      if(val !== null){
+        sessionStorage.removeItem('searchFromCart');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic / SEO -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Meesho India — Online Shopping Site for Ethnic Wear, Home & Lifestyle </title>
+<meta name="description" content="Shop affordable ethnic wear, home & kitchen, beauty, kids' essentials and accessories on Meesho India. Great quality, pocket-friendly prices, fast delivery across India." />
+<meta name="keywords" content="Meesho India, ethnic wear, sarees, kurtis, men's kurta, home decor, affordable shopping, online shopping India" />
+<link rel="canonical" href="https://meeshoindia.netlify.app/" />
+<meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large, max-video-preview:-1" />
+<meta name="author" content="Meesho India" />
+<meta name="theme-color" content="#ff3f6c" />
+
+<!-- Hreflang / language -->
+<link rel="alternate" href="https://meeshoindia.netlify.app/" hreflang="en-IN" />
+<!-- If you add Hindi or other locales, add additional hreflang links -->
+
+<!-- Open Graph (Facebook, LinkedIn, etc.) -->
+<meta property="og:locale" content="en_IN" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Meesho India" />
+<meta property="og:title" content="Meesho India — Affordable Ethnic Wear, Home & Lifestyle Shopping" />
+<meta property="og:description" content="Discover stylish sarees, kurtis, men's ethnic wear, home essentials and beauty products at pocket-friendly prices. Shop with safe checkout and fast delivery across India." />
+<meta property="og:url" content="https://meeshoindia.netlify.app/" />
+<meta property="og:image" content="https://meeshoindia.netlify.app/assets/og-image.jpg" />
+<meta property="og:image:alt" content="Meesho India — Stylish ethnic wear and lifestyle products" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@meeshoindia" />
+<meta name="twitter:creator" content="@meeshoindia" />
+<meta name="twitter:title" content="Meesho India — Affordable Ethnic Wear, Home & Lifestyle Shopping" />
+<meta name="twitter:description" content="Discover stylish sarees, kurtis, men's ethnic wear, home essentials and beauty products at pocket-friendly prices." />
+<meta name="twitter:image" content="https://meeshoindia.netlify.app/assets/og-image.jpg" />
+
+<!-- Favicons & Touch icons (place files in /assets or root) -->
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- Optional performance / font preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Structured Data (JSON-LD): Organization + WebSite + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://meeshoindia.netlify.app/#org",
+      "name": "Meesho India",
+      "url": "https://meeshoindia.netlify.app/",
+      "logo": "https://meeshoindia.netlify.app/assets/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/yourpage",
+        "https://www.instagram.com/yourhandle",
+        "https://twitter.com/yourhandle"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://meeshoindia.netlify.app/#website",
+      "url": "https://meeshoindia.netlify.app/",
+      "name": "Meesho India",
+      "publisher": {
+        "@id": "https://meeshoindia.netlify.app/#org"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://meeshoindia.netlify.app/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://meeshoindia.netlify.app/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        :root {
+            --primary-color: #ff3f6c;
+            --primary-dark: #d63558;
+            --secondary-color: #6c757d;
+            --bg-color: white;
+            --text-color: #222;
+            --font-family: 'Poppins', sans-serif;
+            --shadow-light: rgba(0, 0, 0, 0.07);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* -------------------------
+           NAVBAR
+           - desktop: logo | large centered search | profile & cart at right
+           - mobile (only): logo left and profile+cart in same row, search moves below
+           ------------------------- */
+        header {
+            background: white;
+            padding: 10px 18px;
+            box-shadow: 0 4px 10px var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1100;
+
+            /* Desktop default: three items inline */
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Left: black logo */
+        .logo {
+            font-weight: 800;
+            font-size: 1.9rem;
+            color: #FF3F6C;
+            cursor: pointer;
+            user-select: none;
+            flex: 0 0 auto;
+            text-decoration: none;
+        }
+
+        /* Center: large search bar resembling screenshot */
+        .search-bar {
+            flex: 1 1 560px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 220px;
+            margin: 0 12px;
+        }
+
+        .search-inner {
+            width: 100%;
+            max-width: 820px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: white;
+            border-radius: 28px;
+            border: 1px solid #eae6ee;
+            box-shadow: 0 6px 18px rgba(62, 45, 80, 0.03);
+        }
+
+        .search-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #faf5fb;
+            color: #6c4b6b;
+            font-size: 18px;
+            flex: 0 0 38px;
+        }
+
+        .search-inner input[type="search"] {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-color);
+            width: 100%;
+            padding: 6px 0;
+        }
+
+        /* Keep original searchBtn present but visually minimal to not break JS which references it */
+        .search-btn-hidden {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: none;
+            background: var(--primary-color);
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            visibility: visible;
+        }
+
+        .search-inner:focus-within {
+            border-color: var(--primary-color);
+            box-shadow: 0 6px 20px rgba(255, 63, 108, 0.08);
+        }
+
+        /* Right: profile & cart icons */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 0 0 auto;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 600;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+
+        .action-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        .cart-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 999px;
+            padding: 3px 7px;
+            font-size: 12px;
+            font-weight: 800;
+            box-shadow: 0 6px 16px rgba(255, 63, 108, 0.18);
+        }
+
+        /* Banner / Hero under navbar */
+        .hero {
+            width: 100%;
+            max-width: 1300px;
+            margin: 1.25rem auto;
+            padding: 0 1rem;
+            display: block;
+        }
+
+        .hero-card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 380px;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            left: 1.25rem;
+            top: 1.25rem;
+            color: white;
+            text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .hero-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .hero-cta {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255,63,108,0.18);
+        }
+
+        /* Main content (unchanged) */
+        main {
+            flex-grow: 1;
+            max-width: 1300px;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+        }
+
+        h2.section-title {
+            font-weight: 600;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+
+        /* Categories horizontal scroll */
+        .categories-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            margin-bottom: 2.8rem;
+            padding-bottom: 0.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) #eee;
+            align-items: center;
+        }
+
+        .categories-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .categories-scroll::-webkit-scrollbar-track {
+            background: #eee;
+        }
+
+        .categories-scroll::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .category-item {
+            flex: 0 0 auto;
+            padding: 0.55rem 1.3rem;
+            border-radius: 25px;
+            background: #fff0f4;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            user-select: none;
+            box-shadow: 0 4px 12px rgb(255 63 108 / 0.3);
+            transition: background-color 0.35s ease, color 0.35s ease;
+            white-space: nowrap;
+            border: 1.5px solid transparent;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .category-item .cat-icon {
+            width: 18px;
+            height: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 18px;
+        }
+
+        .category-item.active,
+        .category-item:hover,
+        .category-item:focus {
+            background: var(--primary-color);
+            color: white;
+            outline: none;
+            border-color: var(--primary-dark);
+        }
+
+        /* Products grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 5px 22px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover,
+        .product-card:focus-within {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 35px rgb(0 0 0 / 0.15);
+            outline: none;
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background: #fff0f4;
+        }
+
+        .product-info {
+            padding: 1rem 1.2rem 1.3rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 0 0 0.65rem;
+            color: #222;
+            min-height: 44px;
+        }
+
+        .product-price {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+        }
+
+        .btn-buy {
+            margin-top: 1.15rem;
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            border-radius: 30px;
+            padding: 0.65rem 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgb(255 63 108 / 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-buy:hover,
+        .btn-buy:focus-visible {
+            background: var(--primary-dark);
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #ccc;
+            font-weight: 500;
+            text-align: center;
+            padding: 1.8rem 1rem;
+            user-select: none;
+        }
+
+        /* Toast / notification */
+        .cart-toast {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            padding: 12px 14px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            z-index: 2000;
+            min-width: 300px;
+            max-width: calc(100% - 40px);
+        }
+
+        .cart-toast img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #fff0f4;
+        }
+
+        .toast-body {
+            flex: 1;
+        }
+
+        .toast-title {
+            font-weight: 800;
+            margin: 0 0 6px;
+        }
+
+        .toast-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: 1px solid #ddd;
+            padding: 6px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Responsive adjustments
+           NOTE: desktop layout is preserved (header = flex row).
+           Mobile-only changes below transform header to a grid:
+           top row: logo (left) + nav-actions (right)
+           second row: full-width search bar
+        */
+        @media (max-width: 900px) {
+            header {
+                /* make header a grid on mobile only */
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-template-rows: auto auto;
+                grid-template-areas:
+                    "logo actions"
+                    "search search";
+                gap: 8px 12px;
+                align-items: center;
+                padding: 10px 12px;
+            }
+
+            .logo {
+                grid-area: logo;
+                font-size: 1.6rem;
+            }
+
+            .nav-actions {
+                grid-area: actions;
+                justify-self: end;
+                gap: 8px;
+            }
+
+            .search-bar {
+                grid-area: search;
+                margin: 0;
+                width: 100%;
+                justify-self: stretch;
+            }
+
+            .search-inner {
+                max-width: 100%;
+            }
+
+            .action-icon {
+                width: 18px;
+                height: 18px;
+            }
+
+            main {
+                width: 95%;
+                margin: 2rem auto 3rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .product-title {
+                font-size: 0.9rem;
+                min-height: 38px;
+            }
+
+            .btn-buy {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.9rem;
+            }
+
+            .hero-card img {
+                max-height: 220px;
+            }
+
+            .hero-title {
+                font-size: 1.1rem;
+            }
+        }
+        /* Add margin after hero banner */
+.hero {
+  margin-bottom: 30px; /* you can adjust to 20px or 40px if needed */
+}
+
+/* (Optional) add small top margin for categories to keep visual balance */
+.categories-scroll {
+  margin-top: 10px;
+}
+
+    </style>
+    <!-- JSON-LD Structured Data for Organization -->
+
+
+
+
+</head>
+
+<body>
+    <!-- NAVBAR: logo (black) | large centered search | profile & cart icons (with badge) -->
+    <header>
+        <a class="logo" href="index.html" aria-label="Meesho home">meesho</a>
+
+        <div class="search-bar" role="search" aria-label="Search products">
+            <div class="search-inner">
+                <span class="search-icon" aria-hidden="true">🔍</span>
+                <input type="search" id="searchInput" placeholder="Try Saree, Kurti or Search by Product Code" aria-label="Search products" />
+                <!-- keep searchBtn for JS compatibility (can be visually present) -->
+                <button id="searchBtn" class="search-btn-hidden" aria-label="Search products">Search</button>
+            </div>
+        </div>
+
+        <div class="nav-actions" role="navigation" aria-label="User actions">
+            <button class="action-btn" id="profileBtn" title="Profile" aria-label="Profile">
+                <svg class="action-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zM4 20.5c0-3.59 3.91-6.5 8-6.5s8 2.91 8 6.5" stroke="#6c757d" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <a href="cart.html" class="cart-link" id="cartLink" aria-label="View cart">
+                <svg class="action-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12L4 2H2" stroke="#6c757d" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span id="cartCount" class="cart-badge" aria-hidden="true">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO / Banner added right after navbar -->
+    <div class="hero" role="region" aria-label="Featured banner">
+        <div class="hero-card" aria-hidden="false">
+            <img src="logo.jpg" alt="Logo image for Meesho - Online Shopping Site " />
+            <!-- <div class="hero-overlay" style="pointer-events:none">
+                <h3 class="hero-title">Discover This Season's Ethnic Collection</h3>
+                <button class="hero-cta" style="pointer-events:auto" onclick="document.querySelector('[data-cat=&quot;women&quot;]').click();">Shop Women Ethnic</button>
+            </div> -->
+        </div>
+    </div>
+
+    <main>
+        <!-- <h2 class="section-title" id="sectionTitle">All Products</h2> -->
+        <div class="categories-scroll" id="categoriesScroll" role="tablist" aria-label="Product Categories">
+            <button class="category-item active" role="tab" aria-selected="true" tabindex="0"
+                data-cat="all">
+                <span class="cat-icon" aria-hidden="true">🏷️</span>
+                All
+            </button>
+
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="women">
+                <span class="cat-icon" aria-hidden="true">
+                    <!-- dress / female icon -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 3c0 0 1 2 5 2s5-2 5-2l2 7v11H5V10l2-7z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                Women Ethnic
+            </button>
+
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="men">
+                <span class="cat-icon" aria-hidden="true">
+                    <!-- shirt icon -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 7v9h16V7l-3-3h-10l-3 3z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M8 7v-2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                Men
+            </button>
+
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="home">
+                <span class="cat-icon" aria-hidden="true">
+                    <!-- home icon -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                Home & Kitchen
+            </button>
+
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="beauty">
+                <span class="cat-icon" aria-hidden="true">
+                    <!-- beauty / heart icon -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21s-7-4.8-9-8.4C1.3 9.7 4.2 6 8 6c1.9 0 3.1 1.1 4 2.2C13.9 7.1 15.1 6 17 6c3.8 0 6.7 3.7 5 6.6C19 16.2 12 21 12 21z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                Beauty & Health
+            </button>
+
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1" data-cat="kids">
+                <span class="cat-icon" aria-hidden="true">
+                    <!-- baby icon -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM5 20c0-4.5 3.6-6 7-6s7 1.5 7 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                Kids & Babies
+            </button>
+
+            <button class="category-item" role="tab" aria-selected="false" tabindex="-1"
+                data-cat="accessories">
+                <span class="cat-icon" aria-hidden="true">
+                    <!-- bag icon -->
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 7h12l-1.2 12.4A2 2 0 0 1 14.8 21H9.2a2 2 0 0 1-1.999-1.6L6 7z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                Accessories
+            </button>
+        </div>
+
+        <!-- Products container switched from <section> to <div> as requested.
+             The id and ARIA attributes are retained so existing JS keeps working. -->
+        <div class="products-grid" id="productsGrid" tabindex="0" aria-live="polite" aria-label="Product listings">
+            <!-- Products inserted dynamically -->
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Meesho Clone ! 
+    </footer>
+
+    <script>
+        const productsData = [
+            { id: 'w1', category: 'women', title: "Women’s Pink Ethnic Kurta", price: 499, image: "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/6/a/6aa16e4AYNKB52PINKPink_1.jpg?rnd=20200526195200" },
+            { id: 'w2', category: 'women', title: "Women’s Blue Anarkali Dress", price: 999, image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSYtcvlQ3VZr_j7pi4OBtWIcjzfKrr6tSBFdhxyf473C0MzdkrO3H0pIDmavqu3w7_DR53bjb3haT7gz4fI2chl4KBV-p7e6VQ9j38H3YeFZzugpBIw7DiM&usqp=CAc" },
+            { id: 'w3', category: 'women', title: "Designer Saree", price: 1199, image: "https://static.wixstatic.com/media/faf1ba_8e61a7e398744cc7bf39deab4da8c0a3~mv2.jpg/v1/fill/w_526,h_691,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/faf1ba_8e61a7e398744cc7bf39deab4da8c0a3~mv2.jpghttps://sudathi.com/cdn/shop/files/4314S606_1.jpg?v=1756404683&width=1100" },
+            { id: 'm1', category: 'men', title: "Men’s Casual Shirt", price: 799, image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTu4TN3j6PxQc2nWUa1bMiNw1XlGJY-zt8riKgNLYv4NchC9p4AKtgE2XmtV9FNk8a8OUL16ifMMAY31J1QCdK5N09P3eHoZZG57ufKqZFwt1D6miBSHSD0OosAlz-piTGnHyAZ5S8&usqp=CActtps://images.meesho.com/images/products/87095747/aytzr_512.jpg" },
+            { id: 'm2', category: 'men', title: "Men’s Ethnic Kurta", price: 650, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSnmqNkOw13BgkhuRN4EhPpdfsg4yHU8qSPeEqqOYXDE5gNO2XgYKa3ZQYe1qsrYgacCRpM2wfYlKGfwr0-nICMTANvW8V3AZy_xOymqZoMGPg5u2R9tZ5erg&usqp=CAc" },
+            { id: 'm3', category: 'men', title: "Men’s Jeans", price: 999, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQhkOWQCuIpwMbf4xlpsZXJWUFRXdFkDLkRgswcnKPZGpUpa5BlVnU5QxqFZv4lxcHtZkld1nefO8R2oyFl151rjsygEuLemxz3SNUsN7-PLRzaJcz5loul8lJ0hz5a9xG0FSAKo7qxbIaimPr_&usqp=CAc" },
+            { id: 'home1', category: 'home', title: "Spice Rack for Kitchen", price: 599, image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTUYWe5RuZyf0UI-N3OapMAS8v0ZXBgUEJZmONK8Yj0xHoGS7lcx6WTVHrHPrvTcWbot_uJSbOfh4wcEQB-0tRULAMNMWNfBe7Za90poi9PHUCVeRhe06CTWRqpqQ&usqp=CAc" },
+            { id: 'home2', category: 'home', title: "LED Floor Lamp", price: 1299, image: "https://m.media-amazon.com/images/I/71p5fisYQCL.jpg" },
+            { id: 'home3', category: 'home', title: "Decorative Cushion Cover", price: 349, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSjfWTVZWRTLUrMV-8v8vD8QidMAE0aatyyglZLAcgJuYzBXE8ArkIBA1-DVJ6WZ-ysd9Zyyrc1xSnIpfBQxbR3UhkW1Fjy3GDV5k9DS8E&usqp=CAc" },
+            { id: 'beauty1', category: 'beauty', title: "Natural Face Cream", price: 299, image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSjHClCrXkpRH3sxyfTCmLmjrptBBD5UHTXzD7Qy099wuT75sdvJNtylwP3CQbYY00lgUF6IZNs8AnfEFK-jpI7c05TXrgcJ0BDPY-lNsCH5pfKXN2eHTNrhOK_4Ga3dypPPDuePWw&usqp=CAc" },
+            { id: 'beauty2', category: 'beauty', title: "Hair Oil", price: 450, image: "https://cdn-v2.o2vend.com/433fcd44-c0b5-41b0-a6f8-0b0e764b9b83/7a622465-dc9d-4983-9641-acceb744a49c.webp" },
+            { id: 'kids1', category: 'kids', title: "Baby Rompers", price: 399, image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRGarL6F2tIh5hEaiiOYshYSDsxDG34fDO1Gk39RTUzvqjS2Db6VISNLfuBxh1-gJsK4pwjjhUrGuqQNese8i7UjzmhKsqXFUTAm_UyiPw4_7y1ThUf_BXRZgUvmeD2gY-It00wg271&usqp=CActtps://images.meesho.com/images/products/89180351/fqdrk_512.jpg" },
+            { id: 'kids2', category: 'kids', title: "Kids Sneakers", price: 699, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwGHFZvLYDIzufocp_dvtpNSyWU1owDZjTAQ&sps://images.meesho.com/images/products/99497561/a96s8a3w2utj_512.jpg" },
+            { id: 'acc1', category: 'accessories', title: "Trendy Handbag", price: 799, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQ5P-MaOn9Jq4JtAJCFZ6kooaauphaDm3gQ&s" },
+            { id: 'acc2', category: 'accessories', title: "Sunglasses", price: 499, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi-GFLAXjYFEo1G_9hfdG98D5hh14ddasOGA&ss/products/84388221/sy7kxyjt75lx_512.jpg" }
+        ];
+
+        const productsGrid = document.getElementById('productsGrid');
+        const categoriesScroll = document.getElementById('categoriesScroll');
+        const sectionTitle = document.getElementById('sectionTitle');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+
+        let selectedCategory = 'all';
+        let searchTerm = '';
+
+        // LocalStorage cart helpers
+        function getCart() {
+            try {
+                const raw = localStorage.getItem('cart');
+                return raw ? JSON.parse(raw) : [];
+            } catch (e) {
+                console.error('cart parse error', e);
+                return [];
+            }
+        }
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartBadge();
+        }
+
+        function updateCartBadge() {
+            const countEl = document.getElementById('cartCount');
+            const cart = getCart();
+            const totalQty = cart.reduce((s, i) => s + (i.qty || 0), 0);
+            countEl.textContent = totalQty;
+            const cartLink = document.getElementById('cartLink');
+            cartLink.setAttribute('aria-label', `View cart, ${totalQty} items`);
+        }
+
+        // Add product to cart (increase qty if exists)
+        function addToCart(productId) {
+            const prod = productsData.find(p => p.id === productId);
+            if (!prod) return;
+
+            const cart = getCart();
+            const idx = cart.findIndex(i => i.id === productId);
+            if (idx > -1) {
+                cart[idx].qty += 1;
+            } else {
+                cart.push({ id: prod.id, title: prod.title, price: prod.price, image: prod.image, qty: 1 });
+            }
+            saveCart(cart);
+
+            showAddToast(prod);
+        }
+
+        // Toast (notification) logic
+        let toastTimer = null;
+        function showAddToast(prod) {
+            const existing = document.querySelector('.cart-toast');
+            if (existing) existing.remove();
+
+            const toast = document.createElement('div');
+            toast.className = 'cart-toast';
+            toast.innerHTML = `
+        <img src="${prod.image}" alt="${prod.title}">
+        <div class="toast-body">
+          <div class="toast-title">Added to cart</div>
+          <div style="font-weight:600">${prod.title}</div>
+          <div style="margin-top:8px;display:flex;gap:8px" class="toast-actions">
+            <button class="btn-primary" id="toastCheckout">Checkout</button>
+            <button class="btn-ghost" id="toastContinue">Continue shopping</button>
+          </div>
+        </div>
+      `;
+            document.body.appendChild(toast);
+
+            document.getElementById('toastCheckout').addEventListener('click', () => {
+                window.location.href = 'cart.html';
+            });
+            document.getElementById('toastContinue').addEventListener('click', () => {
+                toast.remove();
+            });
+
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.style.transition = 'opacity 300ms ease, transform 300ms ease';
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(8px)';
+                setTimeout(() => toast.remove(), 320);
+            }, 5000);
+
+            updateCartBadge();
+        }
+
+        // Render products filtered by category and search term
+        function renderProducts() {
+            const filtered = productsData.filter(p => {
+                const matchCat = selectedCategory === 'all' || p.category === selectedCategory;
+                const matchSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchCat && matchSearch;
+            });
+
+        if (sectionTitle) {
+  sectionTitle.textContent = (selectedCategory === 'all' ? 'All Products' : capitalize(selectedCategory)) + (searchTerm ? ` - Search: "${searchTerm}"` : '');
+}
+
+
+            if (filtered.length === 0) {
+                productsGrid.innerHTML = `<p style="color:#666; font-size:1.1rem; grid-column: 1/-1; text-align:center; user-select:none;">No products found.</p>`;
+                return;
+            }
+
+            productsGrid.innerHTML = filtered.map(p => `
+      <article class="product-card" tabindex="0" aria-label="${p.title}, price ₹${p.price}" data-id="${p.id}">
+        <img class="product-image" src="${p.image}" alt="${p.title}" />
+        <div class="product-info">
+          <h3 class="product-title">${p.title}</h3>
+          <div>
+            <div class="product-price">₹${p.price}</div>
+            <button class="btn-buy" data-id="${p.id}" aria-label="Buy ${p.title} now">Buy Now</button>
+          </div>
+        </div>
+      </article>
+    `).join('');
+        }
+
+        // Capitalize first letter
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // Category tabs handler
+        function focusTab(tabBtns, focusedIndex) {
+            tabBtns.forEach((btn, i) => {
+                btn.setAttribute('tabindex', i === focusedIndex ? '0' : '-1');
+                btn.setAttribute('aria-selected', i === focusedIndex ? 'true' : 'false');
+                if (i === focusedIndex) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+            tabBtns[focusedIndex].focus();
+        }
+
+        // Horizontal category button clicks update
+        categoriesScroll.addEventListener('click', e => {
+            if (e.target.classList.contains('category-item')) {
+                searchTerm = '';
+                searchInput.value = '';
+                selectedCategory = e.target.dataset.cat;
+                updateCategoryActive();
+                renderProducts();
+            } else {
+                // handle clicks on inner elements like svg/span
+                const btn = e.target.closest('.category-item');
+                if (btn) {
+                    searchTerm = '';
+                    searchInput.value = '';
+                    selectedCategory = btn.dataset.cat;
+                    updateCategoryActive();
+                    renderProducts();
+                }
+            }
+        });
+
+        // Synchronize active states of categories in header nav and horizontal scroll
+        function updateCategoryActive() {
+            // Horizontal categories
+            [...categoriesScroll.children].forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.cat === selectedCategory);
+                btn.setAttribute('aria-selected', btn.dataset.cat === selectedCategory ? 'true' : 'false');
+                btn.tabIndex = btn.dataset.cat === selectedCategory ? 0 : -1;
+            });
+
+            // Update aria-label on nav
+            if (sectionTitle) {
+  sectionTitle.textContent = (selectedCategory === 'all' ? 'All Products' : capitalize(selectedCategory)) + (searchTerm ? ` - Search: "${searchTerm}"` : '');
+}
+
+        }
+
+        // Search actions
+        searchBtn.addEventListener('click', () => {
+            searchTerm = searchInput.value.trim();
+            renderProducts();
+        });
+        searchInput.addEventListener('keydown', e => {
+            if (e.key === 'Enter') {
+                searchTerm = searchInput.value.trim();
+                renderProducts();
+            }
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchTerm = '';
+                renderProducts();
+            }
+        });
+
+        // Event delegation for Buy Now buttons (attach once)
+        if (!window.__buyHandlerAttached) {
+            productsGrid.addEventListener('click', e => {
+                const btn = e.target.closest('.btn-buy');
+                if (btn) {
+                    const id = btn.dataset.id;
+                    addToCart(id);
+                }
+            });
+
+            productsGrid.addEventListener('keydown', e => {
+                if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('product-card')) {
+                    e.preventDefault();
+                    const id = e.target.dataset.id;
+                    addToCart(id);
+                }
+            });
+
+            window.__buyHandlerAttached = true;
+        }
+
+        // Initialize page (render + badge) and handle BFCache restores
+        function initializePage() {
+            renderProducts();
+            updateCartBadge();
+            const existingToast = document.querySelector('.cart-toast');
+            if (existingToast) existingToast.remove();
+        }
+
+        window.addEventListener('load', initializePage);
+        window.addEventListener('pageshow', initializePage);
+
+        // Initialize keyboard navigation for horizontal categories (roving tabindex)
+        const tabBtns = [...categoriesScroll.querySelectorAll('button.category-item')];
+        let focusedIndex = 0;
+        categoriesScroll.addEventListener('keydown', e => {
+            if (['ArrowRight', 'ArrowLeft'].includes(e.key)) {
+                e.preventDefault();
+                if (e.key === 'ArrowRight') {
+                    focusedIndex = (focusedIndex + 1) % tabBtns.length;
+                } else {
+                    focusedIndex = (focusedIndex - 1 + tabBtns.length) % tabBtns.length;
+                }
+                focusTab(tabBtns, focusedIndex);
+            }
+            if (e.key === 'Home') {
+                e.preventDefault();
+                focusedIndex = 0;
+                focusTab(tabBtns, focusedIndex);
+            }
+            if (e.key === 'End') {
+                e.preventDefault();
+                focusedIndex = tabBtns.length - 1;
+                focusTab(tabBtns, focusedIndex);
+            }
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectedCategory = tabBtns[focusedIndex].dataset.cat;
+                updateCategoryActive();
+                renderProducts();
+            }
+        });
+
+        // Fix back button or 'All' click after search to reset searchTerm
+        window.addEventListener('popstate', () => {
+            searchTerm = '';
+            searchInput.value = '';
+            selectedCategory = 'all';
+            updateCategoryActive();
+            renderProducts();
+        });
+
+        // keep badge synchronized across tabs
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'cart') updateCartBadge();
+        });
+
+        // Set initial keyboard focus state for category tabs:
+        focusTab(tabBtns, 0);
+
+    </script>
+</body>
+
+</html>
