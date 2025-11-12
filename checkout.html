@@ -304,7 +304,7 @@
       localStorage.setItem('contributedToArmy','yes');
       yesBtn.setAttribute('aria-pressed','true');
       noBtn.setAttribute('aria-pressed','false');
-      showToast('Thank you for supporting the Indian Army 🇮🇳');
+      showToast('Thank you for supporting the Indian Army');
 
       // optional: GA event if gtag installed
       try{ if(typeof gtag === 'function') gtag('event','contribution_yes',{event_category:'engagement',event_label:'checkout_yes_click',value:newCount}); }catch(e){}
@@ -382,3 +382,4 @@
   </script>
 </body>
 </html>
+
